@@ -1,9 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import PageA from "../views/PageA.vue";
-import PageB from "../views/PageB.vue";
-import PageB_First from "../views/PageB_First.vue";
-import PageB_Second from "../views/PageB_Second.vue";
 
 Vue.use(VueRouter);
 
@@ -11,23 +7,23 @@ const routes = [
   {
     path: "/",
     name: "PageA",
-    component: PageA
+    component: () => import("@/views/PageA.vue")
   },
   {
     path: "/page-b",
     name: "PageB",
-    component: PageB,
+    component: () => import("@/views/PageB.vue"),
     redirect: "/page-b/first",
     children: [
       {
         path: "first",
         name: "First",
-        component: PageB_First
+        component: () => import("@/views/PageB_First")
       },
       {
         path: "second",
         name: "Second",
-        component: PageB_Second
+        component: () => import("@/views/PageB_Second")
       }
     ]
   }
