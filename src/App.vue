@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <nav id="nav">
+    <header>
       <router-link to="/">PageA</router-link>
       <router-link to="/page-b">PageB</router-link>
-    </nav>
+    </header>
     <router-view />
     <footer>
       Copyright &copy; 2020 Lai
@@ -25,7 +25,7 @@
   color: #2c3e50;
 }
 
-#nav {
+header {
   padding: 30px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   font-size: 0;

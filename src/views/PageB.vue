@@ -42,9 +42,9 @@ export default {
       line-height: 20px;
       font-size: 20px;
       padding: 10px;
-      // &.router-link-exact-active {
-      //   color: #42b983;
-      // }
+      &.router-link-exact-active {
+        color: #dde20b;
+      }
     }
   }
 }
