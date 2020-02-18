@@ -21,10 +21,12 @@ const routes = [
     children: [
       {
         path: "first",
+        name: "First",
         component: PageB_First
       },
       {
         path: "second",
+        name: "Second",
         component: PageB_Second
       }
     ]

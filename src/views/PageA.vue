@@ -1,12 +1,21 @@
 <template>
   <div class="page">
     <div class="title">I am PageA</div>
+    <!-- <button @click="redirect">ddd</button> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: "Home"
+  name: "Home",
+  methods: {
+    redirect() {
+      //name
+      this.$router.push({ name: "First" });
+      //path
+      this.$router.push({ path: "page-b/first" });
+    }
+  }
 };
 </script>
 
